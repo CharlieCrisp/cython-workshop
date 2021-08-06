@@ -3,5 +3,5 @@
 ## Running
 ```
 make
-python entrypoint.py
+python app.py
 ```
