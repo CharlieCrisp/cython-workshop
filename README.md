@@ -46,4 +46,18 @@ C Extensions are useful when:
    - Cython is a much less well known language than C or Python
 
 ## Basics of using Cython to write C Extensions
-.../
+### cdef means C
+Everything else is Python
+ - `cdef` mostly requires type annotations *before* variables
+   - `variable: Type` is still just a type hint that doesn't mean anything to Cython
+   - `cdef Type variable` is a proper Cython typing statement
+   - `cdef Type function():` is another form of Cython typing for functions
+
+### Using multiple files
+ - Cython compiles down to C. Therefore, Cython has a concept of header and source files
+   - `.pyx` means a Cython source file (equivalent to `.c` files)
+   - `.pxd` means a Cython header file (equivalent to `.h` files)
+ - `cimport` parallels Python's `import` by importing other Cython or C code
+   - This requires a `.pxd` header to tell Cython what it can/can't import
+   - **Many errors** come from using `import` rather than `cimport`
+   - 
