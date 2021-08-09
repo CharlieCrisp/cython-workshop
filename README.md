@@ -1,6 +1,7 @@
 # Cython workshop
-This repo accompanies a presentation by Charlie Crisp about basic Cython.
-This repo provides code that you can run and reference from the presentation, but is not intended to function as a standalone resource.
+This repo contains code to give a short introduction to Cython for beginners. 
+Some knowledge of Python and C/C++ is assumed. 
+This repo probably shouldn't be used as a standalone workshop.
 
 This workshop will cover:
   - What are Python C Extensions 
@@ -82,11 +83,11 @@ See [cython-c-interop-example](./cython-c-interop-example/app.py)
   - type casing can be done with `<Type> object`
   - Cython uses `NULL` for the C null pointer
   - `&` operator can be used to get the address of an object
-  - `malloc` and `free` functions are available for `cimport` from `std.libc`
+  - `malloc` and `free` functions are available for `cimport` from `libc.stdlib`
   - `C++` functionality (e.g. `new` keyword or classes) is available in Cython if you wish to use it
 
 
-## Links
+## Links
 Cython has plenty of quirks that you'll find as you use it. 
 The Cython docs, however, are really good and worth a read:
  - [Language basics](https://cython.readthedocs.io/en/latest/src/userguide/language_basics.html)
