@@ -5,5 +5,5 @@ setup(
     name = 'bakery',
     version = '1.0',
     description = 'This is a demo package',
-    ext_modules = cythonize(["cake.pyx", "cake.pxd", "bakery.pyx"], annotate=True)
+    ext_modules = cythonize(["candle_store.pyx", "candle_store.pxd", "bakery.pyx"], annotate=True)
 )

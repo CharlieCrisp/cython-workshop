@@ -11,7 +11,7 @@ This workshop will cover:
 ## What are Python C Extensions
 For a complete description, see the [Python docs](https://docs.python.org/3/extending/extending.html#extending-python-with-c-or-c).
 
-In short, these are libraries which are written in C - sometimes indirectly. 
+In short, these are libraries which are written in C/C++ - sometimes indirectly. 
 These libraries are compiled like normal C but are importable and usable as if they were written in normal Python.
 
 ## Why would you need C Extensions
@@ -20,7 +20,7 @@ C Extensions are useful when:
   - you have **existing code in C/C++** that you want to use from Python
 
 ## What tools you can use to write C Extensions
-### Option 1: Use Python.h directly
+### Option 1: Use [Python.h](https://github.com/python/cpython/blob/main/Include/Python.h) directly
   - The lowest level option
   - See [raw-c-extensions-example](./raw-c-extensions-example/README.md)
   - Pros
@@ -53,13 +53,13 @@ C Extensions are useful when:
 Everything else is Python.
 See [cython-example](./cython-example/libsimple.pyx)
  - `cdef` mostly requires type annotations *before* variables
-   - `variable: Type` is still just a type hint that doesn't mean anything to Cython
    - `cdef Type variable` is a proper Cython typing statement
-   - `cdef Type function():` is another form of Cython typing for functions
+   - `cdef ReturnType function():` is another form of Cython typing for functions
+   - `variable: Type` is still just a type hint that doesn't mean anything to Cython
 
 ### Using multiple files
 See [cython-multiple-files-example](./cython-multiple-files-example/app.py)
- - Cython compiles down to C. Therefore, Cython has a concept of header and source files
+ - Cython compiles down to C/C++. Therefore, Cython has a concept of header and source files
    - `.pyx` means a Cython source file (equivalent to `.c` files)
    - `.pxd` means a Cython header file (equivalent to `.h` files)
  - `cimport` parallels Python's `import` by importing other Cython or C code

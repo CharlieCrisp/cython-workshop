@@ -2,7 +2,7 @@
 #define PY_SSIZE_T_CLEAN
 #include <Python.h>
 
-static int // TODO: move into another file
+static int
 simple_function_impl(void)
 {
     static int counter = 0;
@@ -10,7 +10,6 @@ simple_function_impl(void)
     return counter;
 }
 
-// TODO: why static?
 static PyObject * // returns a python object representing the int
 simple_function(
     PyObject *self, // points to the module object for a module level function, or the object instance for methods
@@ -36,7 +35,7 @@ static struct PyModuleDef simple_function_module = {
     SimpleFunctionMethods}; // Put methods in module definition
 
 PyMODINIT_FUNC // only non static thing in this file
-PyInit_libsimple(void) // This is called when python immports libsimple
+PyInit_libsimple(void) // This is called when python imports libsimple
 {
     return PyModule_Create(&simple_function_module);
 }

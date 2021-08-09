@@ -5,5 +5,5 @@ setup(
     name = 'libsimple',
     version = '1.0',
     description = 'This is a demo package',
-    ext_modules = cythonize("libsimple.pyx")
+    ext_modules = cythonize(["libsimple.pyx"], annotate=True)
 )
