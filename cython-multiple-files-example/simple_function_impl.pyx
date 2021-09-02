@@ -1,6 +1,6 @@
 cdef int counter = 0
 
-cdef int get_some_candles():
+cdef int simple_function():
     global counter
     counter += 1 
     return counter

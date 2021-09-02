@@ -12,6 +12,14 @@ cdef struct Cake:
 cdef int get_num_candles(Cake* cake):
     return cake.num_candles
 
+# type casting
+cdef long get_long_from_int(int input):
+    return <long> input
+
+# null pointer
+cdef int* get_null_ptr():
+    return NULL
+
 # get address of object
 cdef obtain_address():
     cdef int my_local_int = 1

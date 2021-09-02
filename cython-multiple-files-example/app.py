@@ -1,7 +1,7 @@
-import bakery
+import simple_function_wrapper
 
 print("Cython Multiple Files Example")
 
-cake = bakery.bake_cake()
+counter = simple_function_wrapper.simple_function_wrapper()
 
-print(f"baked cake with {cake.get_num_candles()} candles")
+print(f"Got the counter {counter}")

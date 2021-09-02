@@ -12,9 +12,7 @@ This workshop will cover:
 ## What are Python C Extensions
 For a complete description, see the [Python docs](https://docs.python.org/3/extending/extending.html#extending-python-with-c-or-c).
 
-In short, these are libraries which are written in C/C++ - sometimes indirectly. 
-These libraries are compiled like normal C but are importable and usable as if they were written in normal Python.
-
+In short, these are libraries which are written in C/C++ (sometimes indirectly) and are compiled like normal C/C++ but are importable and usable as if they were written in normal Python.
 ## Why would you need C Extensions
 C Extensions are useful when:
   - you want to write **fast code** that Python is too slow for, but you want to be able to use that code from Python
@@ -33,12 +31,15 @@ C Extensions are useful when:
     - Code probably looks unfamiliar to both Python and C developers
   - It's useful to know about `Python.h` but you probably shouldn't write C Extensions this way
 
+![C-Extensions Diagram](./img/c-extensions.png)
+
 ### Option 2: Use ctypes
  - See [ctypes-example](./ctypes-example/README.md)
  - A library allowing you to import C from Python
  - Minimises the amount of boilerplate you need to write
  - We wont cover `ctypes` in detail, you just need to know it is an alternative to Cython
 
+![ctypes Diagram](./img/ctypes-c-extension.png)
 ### Option 3: Use Cython
  - See [cython](./cython/README.md)
  - Gives you a specific language that brings together elements of Python and C/C++
@@ -49,6 +50,7 @@ C Extensions are useful when:
    - Has a fair number of gotchas
    - Cython is a much less well known language than C or Python
 
+![cython Diagram](./img/cython-c-extension.png)
 ## Basics of using Cython to write C Extensions
 ### cdef means C
 Everything else is Python.
@@ -57,6 +59,7 @@ See [cython-example](./cython-example/libsimple.pyx)
    - `cdef Type variable` is a proper Cython typing statement
    - `cdef ReturnType function():` is another form of Cython typing for functions
    - `variable: Type` is still just a type hint that doesn't mean anything to Cython
+ - See [cython-cdef-class-example](./cython-cdef-class-example/bakery.pyx) for an example cdef class.
 
 ### Using multiple files
 See [cython-multiple-files-example](./cython-multiple-files-example/app.py)
