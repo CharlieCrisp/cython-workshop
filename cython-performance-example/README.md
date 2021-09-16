@@ -16,3 +16,11 @@ python -m pip install cython pytest pytest-benchmark
 python setup.py install
 python -m pytest . --benchmark-group-by=func
 ```
+
+
+## Results
+ - Optimised Cython should be about 1000x faster than plain Python in this example.
+ - However
+   - Introducing risk of segmentation faults
+   - Speedup may not be as noticable when comparing to already-optimised libraries like numpy
+   - Other options such as `numba` are available
