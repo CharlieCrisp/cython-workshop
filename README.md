@@ -21,6 +21,7 @@ C Extensions are useful when:
 ## What tools you can use to write C Extensions
 ### Option 1: Use [Python.h](https://github.com/python/cpython/blob/main/Include/Python.h) directly
   - The lowest level option
+  - Comes with CPython interpreter
   - See [raw-c-extensions-example](./raw-c-extensions-example/README.md)
   - Pros
     - Allow you to write C Extensions
@@ -43,15 +44,20 @@ C Extensions are useful when:
 ### Option 3: Use Cython
  - See [cython](./cython/README.md)
  - Gives you a specific language that brings together elements of Python and C/C++
+ - It's a superset of Python
  - Pros
    - Best of both worlds. Should be familiar to both C and Python developers.
    - Minimal boilerplate
  - Cons
    - Has a fair number of gotchas
    - Cython is a much less well known language than C or Python
+   - Much less tooling to help with Cython e.g. testing, benchmarking, profiling etc
 
 ![cython Diagram](./img/cython-c-extension.png)
-## Basics of using Cython to write C Extensions
+
+## How Cython can speed up your Python
+See [cython-performance-example](./cython-performance-example/README.md) for an example of how Cython can speed up your Python.
+## Appendix: Basics of using Cython to write C Extensions
 ### cdef means C
 Everything else is Python.
 See [cython-example](./cython-example/libsimple.pyx)
@@ -95,3 +101,4 @@ Cython has plenty of quirks that you'll find as you use it.
 The Cython docs, however, are really good and worth a read:
  - [Language basics](https://cython.readthedocs.io/en/latest/src/userguide/language_basics.html)
  - [Basic tutorial](https://cython.readthedocs.io/en/latest/src/tutorial/cython_tutorial.html)
+
