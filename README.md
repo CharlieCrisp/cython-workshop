@@ -63,8 +63,10 @@ See [cython-performance-example](./cython-performance-example/README.md) for an 
  - You can use profiling without too much effort. See [cython-profiling-example](./cython-profiling-example/app.py).
  - From experience, IDE integration is poor. Sorry.
  - Detecting memory leaks is tricky and tooling around it is poor. 
-  [This example](https://adrianeboyd.github.io/using-valgrind-with-cython/) shows someone using valgrind with Cython but this is not standard practice.
+  [This example](https://adrianeboyd.github.io/using-valgrind-with-cython/) shows someone using valgrind with Cython but I've not got it working personally (on mac).
  - Using the debugger is tricky too. [The Cython docs](http://docs.cython.org/en/latest/src/userguide/debugging.html) mention it but I've not been successful in using it personally.
+ - You can use pytest to run tests which are written in Cython. 
+   See [cython-testing-example](./cython-testing-example/README.md) or [this blog which the example is drawn from](https://shwina.github.io/cython-testing/).
 
 ## Appendix: Basics of using Cython to write C Extensions
 ### cdef means C
