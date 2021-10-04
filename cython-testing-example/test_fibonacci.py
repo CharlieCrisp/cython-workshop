@@ -1,5 +1,3 @@
-# file: test_foo.py
-
 import importlib
 import sys
 
