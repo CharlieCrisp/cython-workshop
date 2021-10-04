@@ -28,7 +28,7 @@ def fib_optimised(n):
     if n == 1:
         return 1
     
-    cdef int* results = <int*> malloc(n * sizeof(int))
+    cdef int* results = <int*> malloc((n+1) * sizeof(int))
 
     results[0] = 0
     results[1] = 1

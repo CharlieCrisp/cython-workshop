@@ -1,13 +1,15 @@
 # Cython workshop
-This repo contains code to give a short introduction to Cython for beginners. 
+This repo contains code to give a short introduction to Cython - what it is and why you would want to use it. 
 Some knowledge of Python and C/C++ is assumed. 
-This repo probably shouldn't be used as a standalone workshop.
 
 This workshop will cover:
   - What are Python C Extensions 
   - Why would you need C Extensions
   - (briefly) What tools you can use to write C Extensions
-  - Basics of using Cython to write C Extensions
+  - Using Cython to write C Extensions
+    - Performance benefits
+    - Downsides
+    - Tooling support
 
 ## What are Python C Extensions
 For a complete description, see the [Python docs](https://docs.python.org/3/extending/extending.html#extending-python-with-c-or-c).
@@ -42,7 +44,7 @@ C Extensions are useful when:
 
 ![ctypes Diagram](./img/ctypes-c-extension.png)
 ### Option 3: Use Cython
- - See [cython](./cython/README.md)
+ - See [cython](./cython-example/README.md)
  - Gives you a specific language that brings together elements of Python and C/C++
  - It's a superset of Python
  - Pros
